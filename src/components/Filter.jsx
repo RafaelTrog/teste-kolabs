@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FilterStyled = styled.div`
+    grid-area: filter;
     width: 250px;
     border-radius: 10px 10px 0 0;
     border: 1px solid #c9c9c9;
     background-color: #fff;
-    height: 500px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ const FilterItem = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: ${(props) => props.type === 'title' ? '30px 15px' : '10px 15px'};
     user-select: none;
     box-sizing: border-box;
     background-color: ${(props) => props.type === 'title' ? '#00a7eb' : '#fff'};
@@ -55,7 +55,7 @@ const FilterItem = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 10px;
-        // font-weight: bold;
+        font-weight: 700;
     }
 
     &:hover:after {

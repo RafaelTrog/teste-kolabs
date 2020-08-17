@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FaSearch } from 'react-icons/fa'
 
 const SearchBarStyle = styled.div`
+    grid-area: searchbar;
     width: 100%;
     margin-bottom: 30px;
 `
